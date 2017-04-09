@@ -1,6 +1,6 @@
 (function (doc, win) {
     // api服务端地址
-    win.SERVER_ROOT = 'http://m.ceocio.com.cn/admin/api.php';
+    win.SERVER_ROOT = 'http://127.0.0.1/api.php';
     // 缓存目录
     win.CACHEDIR = "magazine";
     // 动画效果
