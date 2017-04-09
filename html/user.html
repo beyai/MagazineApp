@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>用户</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+</head>
+<body>
+	<header class="HeaderBar blue">
+        <button type="button" id="CloseWin"><i class="icon-back"></i></button>
+        <h1></h1>
+        <button type="button"></button>
+    </header>
+    <div class="user-header">
+        <div class="user-header-pics">
+            <img src="../images/user.png">
+        </div>
+        <div class="user-header-info">
+           <!--  <p>{{username}}</p>
+            <button class="userlogin" id="Logout">退&nbsp;&nbsp;出</button> -->
+        </div>
+    </div>
+    <div id="Loading"><div></div><div></div><div></div></div>
+
+    <script type="text/html" id="UserInfo">
+        {{if (!username || !uid ) }}
+            <button class="userlogin" id="Login">登&nbsp;&nbsp;录</button><p>如果您还没有账号，请到商城注册</p>
+        {{ else }}
+            <p>{{username}}</p><button class="userlogin" id="Logout">退&nbsp;&nbsp;出</button>
+        {{/if}}
+    </script>
+    
+
+    <script src="../script/libs/zepto.js"></script>
+    <script src="../script/common.js"></script>
+    <script src="../script/libs/api.js"></script>
+    <script src="../script/libs/template.js"></script>
+    <script src="../script/user.js"></script>
+</body>
+</html>

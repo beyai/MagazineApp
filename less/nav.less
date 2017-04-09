@@ -1,0 +1,49 @@
+.NavBar {
+	position: relative;
+	display: -webkit-box;
+	height  : @nav-height;
+	background-color: @color-bg;
+	overflow: hidden;
+	width: 100%;
+	a {
+		display: block;
+		width: 100%;
+		text-align: center;
+		color: @color-text;
+		height: 100%;
+	}
+}
+
+
+// 滚动导航
+.ui-nav-wrap {
+	display: -webkit-box;
+	-webkit-box-flex: 1;
+	overflow: visible!important;
+}
+.ui-nav-scroll {
+	padding:0;
+	margin: 0;
+}
+.ui-nav-list {
+	display: table;
+    table-layout: fixed;
+    white-space: nowrap;
+    width: auto;
+	li {
+		text-align: center;
+		line-height: @nav-height;
+		display: inline-block;
+		padding : 0 @space-sm;
+		font-size: @font-size-md;
+		transition : transform 0.1s ease-in-out;
+		transform : scale(0.85);
+		
+		&.action {
+			transform:scale(1);
+			a {
+				color :@color-main;
+			}
+		}
+	}
+}

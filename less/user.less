@@ -1,0 +1,35 @@
+.user-header {
+	background-color: @color-bule;
+	width:100%;
+    padding-bottom: 44px;
+    height: 250px;
+    &-pics {
+    	display:-webkit-box;
+	    -webkit-box-pack: center;
+	    -webkit-box-align: center;
+    	img {
+    		width:120px;
+    		height: 120px;
+    		border-radius: 50%;
+    	}
+    }
+    &-info {
+        margin-top: 15px;
+    	text-align: center;
+    	color : #FFFFFF;
+    }
+    .userlogin {
+    	border:2px solid #FFFFFF;
+    	color : #FFFFFF;
+    	height:32px;
+    	border-radius: 200px;
+    	padding:0 1.5em;
+    	font-size: 16px;
+        & + p {
+            margin-top: 15px;
+        }
+    }
+    p + .userlogin {
+        margin-top: 15px;
+    }
+}

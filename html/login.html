@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+</head>
+<body class="bgGray">
+	<header class="HeaderBar blue">
+        <button type="button"></button>
+        <h1>登录</h1>
+        <button type="button" id="CloseWin"><i class="icon-close"></i></button>
+    </header>
+    <div class="ui-form">
+        <form onsubmit="return false;" id="FORM" novalidate>
+            <div class="ui-form-header">如果您还没有账号，请到商城注册</div>
+            <div class="ui-form-group border-top-bottom">
+                <div class="ui-form-item">
+                    <label for="username">账号</label>
+                    <input type="email" placeholder="Email" name="username" id="username" value="">
+                </div>
+                <div class="ui-form-item">
+                    <label for="pwd">密码</label>
+                    <input type="password" placeholder="6位以上" name="pwd" id="pwd" value="">
+                </div>
+            </div>
+            <div class="ui-form-button">
+                <button type="submit" class="" id="Submit">登&nbsp;&nbsp;录</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../script/libs/zepto.js"></script>
+    <script src="../script/common.js"></script>
+    <script src="../script/libs/api.js"></script>
+    <script src="../script/login.js"></script>
+</body>
+</html>

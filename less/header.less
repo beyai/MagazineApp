@@ -1,0 +1,33 @@
+@header-height : 44px;
+
+.HeaderBar {
+	display: flex;
+	height: @header-height;
+	width: 100%;
+	background-color : @color-main;
+	-webkit-box-align:center;
+	align-item: center;
+	box-sizing: content-box;
+	color : #FFF;
+	&.gray {
+		background-color: @color-bg;
+		color : @color-text;
+	}
+	&.blue {
+		background-color: @color-bule;
+	}
+	& > h1 {
+		display:-webkit-box;
+		-webkit-box-flex : 1;
+		flex : 1;
+		-webkit-box-pack: center;
+		-webkit-box-align: center;
+		font-size: 18px;
+	}
+
+	& > button {
+		padding : 0 @space-sm;
+		min-width: 44px;
+		color : #FFF;
+	}
+}

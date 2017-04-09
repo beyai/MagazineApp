@@ -1,0 +1,51 @@
+// 开关
+.ui-switch {
+	font-size: 0;
+	position: relative;
+	cursor: pointer;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-pack: center;
+	input[type="checkbox"] {
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		position: relative;
+	    width: 52px;
+	    height: 32px;
+	    border: 1px solid @color-border;
+	    outline: 0;
+	    border-radius: 16px;
+	    background: @color-border;
+	    &:after,&:before {
+			content: " ";
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    height: 30px;
+		    border-radius: 15px;
+		    transition: transform .3s;
+		}
+		&:before {
+			width: 50px;
+	    	background-color: @color-bg;
+		}
+		&:after {
+			width: 30px;
+		    background-color: #fff;
+		    box-shadow: 0 1px 3px rgba(0,0,0,.4);
+		}
+	    &:checked {
+		    border-color: @color-success;
+		    background-color: @color-success;
+		   	&:before {
+			    -webkit-transform: scale(0);
+			    transform: scale(0)
+			}
+			&:after {
+			    -webkit-transform: translateX(20px);
+			    transform: translateX(20px)
+			}
+		}
+	}
+}

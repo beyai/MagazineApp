@@ -1,0 +1,179 @@
+// 列表
+.ArticleList {
+    margin-bottom: 1rem;
+    transition: opacity .3s ease;
+    
+    &-item {
+        display: flex;
+        width:100%;
+        .border-bottom;
+        padding: 0.8rem 2rem 0.8rem 1rem;
+        &:after {
+            left:1rem;
+        }
+        &.action {
+            background: @color-bg;
+        }
+        &:last-child:after {
+            left: 0;
+        }
+        
+        &-pic {
+            display:-webkit-box;
+            -webkit-box-flex : 1;
+            flex : 2;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+            margin-right: 1rem;
+        }
+        &-img {
+            display: -webkit-box;
+            width:100%;
+            padding-top: 75%;
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: 100%;
+            background-color: #F3F3F3;
+        }
+
+        &-text {
+            position: relative;
+            -webkit-box-flex : 1;
+            flex : 3;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+
+            &:before {
+                position: absolute;
+                content: " ";
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border:0;
+                right:-1rem;
+                top:50%;
+                margin-top: -6px;
+                border-left:2px solid @color-border;
+                border-top:2px solid @color-border;
+                transform: rotate(135deg)
+            }
+        }
+
+        &-title {
+            display: -webkit-box;
+            width:100%;
+            font-size: 17px;
+            line-height: 1.2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+
+        &-mate {
+            display: -webkit-box;
+            width:100%;
+            margin-top: 0.5rem;
+            font-size: 12px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            color : @color-text-muted;
+        }
+    }
+    .ArticleList-item:first-child {
+        flex-direction : column;
+        padding:0;
+
+        .ArticleList-item-pic {
+            display: block;
+            width:100%;
+            flex : 1;
+            margin-right: 0;
+        }
+        .ArticleList-item-img {
+            display: block;
+            width:100%;
+            background-position: center;
+            padding-top: 50%;
+        }
+        .ArticleList-item-text {
+            margin-left: 0;
+            padding: 0.8rem 2rem 0.8rem 1rem;
+            &:before{
+                right: 1rem;
+            }
+        }
+    }
+}
+
+// 文章内容
+.ArticleWrap {
+    transition: opacity .3s ease;
+    &-header {
+        display: -webkit-box;
+        -webkit-box-align: center;
+        color :#FFF;
+        h1 {
+            padding:1rem 1rem;
+            font-size: 24px;
+            line-height: 1.2;
+            width:100%;
+        }
+        small {
+            margin-top: 10px;
+            font-size: 14px;
+            width:100%;
+        }
+    }
+
+    &-pic {
+        img {
+            width:100%;
+        }
+    }
+
+
+    &-content {
+        padding: 1rem;
+        font-size: 19px;
+        line-height: 2;
+        img {
+            max-width:100%!important;
+            height: auto!important;
+            display: block;
+            margin: 0 auto;
+        }
+        p + p {
+            margin-top: @space;
+        }
+    }
+}
+
+.ui-checkbox {
+    display: inline-block;
+    width: 25px;
+    height: 1px;
+    position: relative;
+    overflow: visible;
+    border: 0;
+    background: 0 0;
+    -webkit-appearance: none;
+    outline: 0;
+    vertical-align: middle;
+    &:before {
+        position: absolute;
+        content: "";
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: .2px;
+        width: 24px;
+        height: 24px;
+        top:50%;
+        margin-top: -12px;
+        background: url(../images/checkbox.svg)
+    }
+    &:checked:before,&.checked:before {
+        background: url(../images/checkbox_action.svg)
+    }
+}

@@ -1,0 +1,111 @@
+/**
+ * 混合方法
+ * @authors chengyao (chandre21cn@gmail.com)
+ * @date    2016-04-20 17:08:39
+ * @version $Id$
+ */
+
+.border-radius (@color-border: @color-border , @border-radius : @border-radius) {
+    border:1px solid @color-border;
+    border-radius: @border-radius;
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+        position: relative;
+        border:0;
+        &:before{
+            content:"";
+            width: 200%;
+            height: 200%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid @color-border;
+            -webkit-transform:scale(.5);
+            -webkit-transform-origin: 0 0;
+            padding: 1px;
+            box-sizing: border-box;
+            border-radius: @border-radius;
+            pointer-events: none;
+        }
+    }
+}
+
+
+.box-sizing (@type : border-box ) {
+      box-sizing: @type;
+}
+
+// 清浮动
+.clearfix() {
+      *zoom:1;
+      &:before,
+      &:after {
+          content: "";
+          display: block;
+          overflow: hidden;
+      }
+      &:after {
+            clear: both;
+      }
+}
+
+// 居中块
+.center-block() {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+}
+
+// 尺寸
+.size(@width; @height) {
+      width: @width;
+      height: @height;
+}
+.square(@size) {
+      .size(@size; @size);
+}
+
+// 表单占位文字颜色
+.placeholder(@color) {
+      &:-moz-placeholder            { color: @color; } // Firefox 4-18
+      &::-moz-placeholder           { color: @color; } // Firefox 19+
+      &:-ms-input-placeholder       { color: @color; } // Internet Explorer 10+
+      &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
+}
+
+// 单行文本溢出隐藏，显示省略号
+.text-overflow() {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+}
+
+// 不换行
+.nobr () {
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+// 文本不可见
+.text-hide () {
+      font: ~"0/0" a;
+      color: transparent;
+      text-shadow: none;
+      background-color: transparent;
+      border: 0;
+}
+
+// Retina显示背景
+.retina-bg-img(@file-1x; @file-2x; @width-1x; @height-1x) {
+      background-image: url("@{file-1x}");
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+            background-image: url("@{file-2x}");
+            background-size: @width-1x @height-1x;
+      }
+}
+
+// 透明
+.opacity(@opacity) {
+    opacity:@opacity;
+    filter:~"alpha(opacity="(@opacity * 100)~")";
+}
+

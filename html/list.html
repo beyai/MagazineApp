@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>文章列表</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+</head>
+<body>
+	<div class="ArticleList" style="opacity: 0 ;">
+        <div id="Loading"><div></div><div></div><div></div></div>
+    </div>
+    <script type="text/html" id="ArticleItem">
+        {{ each list as value}}
+        <div class="ArticleList-item" tapmode="action" data-id="{{value.id}}">
+            {{if value.img!="" }}
+            <div class="ArticleList-item-pic"><div class="ArticleList-item-img" style="background-image: url({{value.img}})"></div></div>
+            {{/if}}
+            <div class="ArticleList-item-text">
+                <div class="ArticleList-item-title">{{value.itarticlename}}</div>
+                <div class="ArticleList-item-mate">{{value.summary}}</div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+
+    <script src="../script/libs/zepto.js"></script>
+    <script src="../script/libs/template.js"></script>
+    <script src="../script/common.js"></script>
+    <script src="../script/article_list.js"></script>
+</body>
+</html>

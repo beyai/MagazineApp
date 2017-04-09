@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widget id="A6921519075619" version="0.0.1"> 
+  <name>IT经理世界</name>  
+  <description>CEOCIO</description>  
+  <author email="service@ceocio.com.com" href="http://www.ceocio.com.cn">ceocio</author>  
+  <content src="html/index.html"/>  
+  <preference name="pageBounce" value="true"/>  
+  <preference name="appBackground" value="rgba(0,0,0,0.0)"/>  
+  <preference name="windowBackground" value="rgba(34,36,53,1)"/>  
+  <preference name="frameBackgroundColor" value="rgba(34,36,53,1)"/>
+  <preference name="hScrollBarEnabled" value="false"/>  
+  <preference name="vScrollBarEnabled" value="true"/>  
+  <preference name="autoLaunch" value="true"/>  
+  <preference name="fullScreen" value="false"/>  
+  <preference name="autoUpdate" value="true"/>  
+  <preference name="smartUpdate" value="true"/>  
+  <preference name="statusBarAppearance" value="true"/>  
+  <permission name="readPhoneState"/>  
+  <permission name="fileSystem"/>  
+  <permission name="internet"/>  
+  <permission name="hardware"/>  
+  <access origin="*"/>  
+  <feature name="zip"/>  
+  <feature name="fs"/>  
+  <feature name="push"/>  
+  <feature name="mam"/> 
+</widget>

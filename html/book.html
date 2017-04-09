@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>杂志</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+</head>
+<body>
+	<header class="HeaderBar">
+        <button type="button" id="CloseWin"><i class="icon-back"></i></button>
+        <h1>第 <span id="BookNum">000</span> 期</h1>
+        <button type="button" id="OpenSlide"></button>
+    </header>
+    <nav class="NavBar">
+    	<div class="ui-nav-wrap">
+		    <div class="ui-nav-scroll">
+		        <ul class="ui-nav-list">
+		        	<!-- <li class="action"><a href="javascript:;">特写</a></li> -->
+		        </ul>
+		    </div>
+		</div>
+    </nav>
+    <script type="text/html" id="NavItem">
+    	{{ each datalist as value i }}
+    		<li class="{{ i===0 ? "action" : "" }}"><a href="javascript:;" data-id="{{value.id}}">{{value.columnname}}</a></li>
+    	{{/each}}
+    </script>
+
+    <script src="../script/libs/zepto.js"></script>
+    <script src="../script/libs/api.js"></script>
+    <script src="../script/libs/underscore.js"></script>
+    <script src="../script/libs/iscroll.js"></script>
+    <script src="../script/libs/template.js"></script>
+    <script src="../script/common.js"></script>
+    <script src="../script/book.js"></script>
+</body>
+</html>

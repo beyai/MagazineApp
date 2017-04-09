@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>杂志列表</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+</head>
+<body class="bgGray">
+	<!-- <section class="BookList">
+        <div class="BookList-Header"><span>2016年</span></div>
+        <div class="BookList-item">
+            <div class="BookList-item-pic">
+                <div class="BookList-item-img" style="background-image: url(http://m.ceocio.com.cn/data/upload/cover/2016-01-22/56a1cb7d77388.jpg)"></div>
+            </div>
+            <div class="BookList-item-title">企业级入口之争</div>
+        </div>
+    </section> -->
+    <div id="BookWrap"></div>
+    
+    <div id="Loading" style="display:none"><div></div><div></div><div></div></div>
+
+    <script type="text/html" id="bookGroup">
+		<section class="BookList">
+        	<div class="BookList-Header border-bottom"><span>{{year}}年</span></div>
+        	{{each data as value }}
+        		<div class="BookList-item {{ value.isDown ? "action" : "" }}"  data-id="{{value.id}}" data-number="{{value.number}}" id="magazine{{value.id}}">
+		            <div class="BookList-item-pic">
+		                <div class="BookList-item-img" data-echo="http://img.cio.com.cn:3389/c180x239/jpg/{{value.img}}"></div>
+                        <div class="BookList-item-down" style="display: {{ value.isDown ? "none" : "block" }}";"></div>
+		            </div>
+		            <div class="BookList-item-title">{{ value.prefacetitle=="" ? value.title : value.prefacetitle }}</div>
+		        </div>
+        	{{/each}}
+		</section>
+    </script>
+
+
+    <script src="../script/libs/zepto.js"></script>
+    <script src="../script/libs/api.js"></script>
+    <script src="../script/libs/underscore.js"></script>
+    <script src="../script/libs/echo.js"></script>
+    <script src="../script/libs/template.js"></script>
+    <script src="../script/common.js"></script>
+    <script src="../script/main.js"></script>
+</body>
+</html>

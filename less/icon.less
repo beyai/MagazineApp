@@ -1,0 +1,49 @@
+.icon {
+	display:-webkit-box;
+	width 	: 24px;
+	height 	: 24px;
+	background-size: 24px 24px;
+	background-position: center;
+	background-repeat: no-repeat;
+	// .opacity(0.5);
+}
+.icon-user {
+	&:extend(.icon);
+	background-image: url(../images/red/user.svg);
+	background-size: 26px 26px;
+}
+
+.icon-down {
+	&:extend(.icon);
+	background-image: url(../images/red/down.svg);
+	.opacity(0.8);
+}
+
+.icon-back {
+	&:extend(.icon);
+	background-size: 20px 20px;
+	background-image: url(../images/red/back.svg);
+	&.gray {
+		background-image: url(../images/gray/back.svg)
+	}
+}
+
+.icon-list {
+	&:extend(.icon);
+	background-image: url(../images/red/list.svg);
+	background-size: 20px 20px;
+}
+
+.icon-edit {
+	&:extend(.icon);
+	background-image: url(../images/red/edit.svg);
+	background-size: 24px 24px;
+}
+
+.icon-close {
+	&:extend(.icon);
+	background-image: url(../images/red/close.svg);
+	&.gray {
+		background-image: url(../images/gray/close.svg)
+	}
+}

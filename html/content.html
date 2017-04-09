@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>文章内容</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+</head>
+<body>
+
+	<div class="ArticleWrap">
+    </div>
+
+    <script type="text/html" id="Article">
+        <div class="ArticleWrap-header">
+            <h1>{{itarticlename}}<br><small>作者：{{author}}</small></h1>
+        </div>
+        {{if (img!="") }}
+            <div class="ArticleWrap-pic">
+                <img src="{{img}}">
+            </div>
+        {{/if}}
+        <div class="ArticleWrap-content">{{#content}}</div>
+    </script>
+    <script src="../script/libs/zepto.js"></script>
+    <script src="../script/libs/api.js"></script>
+    <script src="../script/libs/template.js"></script>
+    <script src="../script/common.js"></script>
+    <script src="../script/content.js"></script>
+</body>
+</html>

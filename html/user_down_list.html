@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>用户已下载列表</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+</head>
+<body>
+<script type="text/html" id="BookItem">
+    {{ if list.length }}
+        <div class="ui-list">
+            {{each list as value i}}
+                <div class="{{ isEdit ? "ui-list-item-edit" : "ui-list-item"}}" tapmode="action" data-id="{{value.id}}" data-number="{{value.number}}" id="Book{{value.id}}">
+                    <img src="{{value.img}}" width="80" height="106">
+                    <div class="ui-list-text">
+                        <h2>第 {{value.number}} 期</h2>
+                        {{ value.prefacetitle=="" ? value.title : value.prefacetitle }}
+                    </div>
+                    {{if isEdit}} <input type="checkbox" value="{{value.id}}" class="ui-checkbox">{{/if}}
+                </div>
+            {{/each}}
+        </div>
+    {{ else }}
+        <div class="pageTips">
+            您还没有下载杂志
+        </div>
+    {{/if}}
+</script>
+
+    <script src="../script/libs/zepto.js"></script>
+    <script src="../script/libs/underscore.js"></script>
+    <script src="../script/libs/api.js"></script>
+    <script src="../script/common.js"></script>
+    <script src="../script/libs/template.js"></script>
+    <!-- <script src="../script/libs/dynamics.js"></script> -->
+    <script src="../script/user_down_list.js"></script>
+</body>
+</html>

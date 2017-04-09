@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>用户信息</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+</head>
+<body>
+    <div class="ui-list">
+      <!--   <div class="ui-list-item" tapmode="action" data-page="./user_fav.html">
+            <img src="../images/fav.svg" width="32" height="32">
+            <div class="ui-list-text"><h2>我的收藏</h2></div>
+            <div class="ui-list-muted" id="Fav"></div>
+        </div> -->
+        <div class="ui-list-item" tapmode="action" data-page="./user_down.html">
+            <img src="../images/book.svg" width="32" height="32">
+            <div class="ui-list-text"><h2>我的杂志</h2></div>
+            <div class="ui-list-muted" id="Down"></div>
+        </div>
+        <div class="ui-list-item" tapmode="action"  data-page="./user_set.html">
+            <img src="../images/set.svg" width="32" height="32">
+            <div class="ui-list-text"><h2>设置</h2></div>
+        </div>
+        <div class="ui-list-item" tapmode="action"  data-page="./about.html">
+            <img src="../images/about.svg" width="32" height="32">
+            <div class="ui-list-text"><h2>关于我们</h2></div>
+        </div>
+    </div>
+
+    <script src="../script/libs/zepto.js"></script>
+    <script src="../script/common.js"></script>
+    <script src="../script/libs/api.js"></script>
+    <script src="../script/user_info.js"></script>
+</body>
+</html>

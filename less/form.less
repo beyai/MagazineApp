@@ -1,0 +1,60 @@
+.ui-form {
+	margin-top: 2rem;
+	width:100%;
+	overflow: hidden;
+	&-header {
+		margin: 1rem;
+		color : @color-text-info;
+	}
+	&-group {
+		background-color: #FFF;
+	}
+	&-item {
+		display: flex;
+		height: 44px;
+		.border-top;
+		&:first-child {
+			&:before {
+				display: none;
+			}
+		}
+		&:before {
+			left: 1rem;
+		}
+		& > label , & > input {
+			display:-webkit-box;
+			-webkit-box-flex : 1;
+			-webkit-box-pack: center;
+			-webkit-box-align: center;
+			font-size: 16px;
+		}
+		& > label {
+			padding:0 1rem;
+		}
+
+		& > input {
+			flex : 5;
+			position: relative;
+			background-color: transparent;
+			border:0;
+			padding-right:1rem;
+		}
+	}
+
+	&-button {
+		padding:1.5rem 1rem;
+		button {
+			width:100%;
+			min-height: 38px;
+			border-radius: 5px;
+			background-color: @color-border;
+			font-size: 18px;
+			color : @color-text-info;
+
+			&.action {
+				background-color: @color-main;
+				color : #FFF;
+			}
+		}
+	}
+}
